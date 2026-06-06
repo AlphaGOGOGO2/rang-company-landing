@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/pretendard-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/pretendard-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/pretendard-900.woff2") format("woff2");
+}
+
 :root {
   --ink: #211d1a;
   --muted: #6f6257;
@@ -144,7 +168,7 @@ img {
   background: var(--ink);
   border-radius: 4px;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .hero-grid {
@@ -175,7 +199,7 @@ img {
   place-items: center;
   border-bottom: 1px solid rgba(33, 29, 26, 0.12);
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .service-rail a:first-child {
@@ -287,7 +311,7 @@ img {
   border: 1px solid rgba(33, 29, 26, 0.12);
   border-radius: 999px;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 900;
   box-shadow: 0 10px 24px rgba(82, 51, 32, 0.06);
 }
 
@@ -565,7 +589,7 @@ img {
 .service-card p {
   margin: 0;
   color: var(--muted);
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.56;
   text-wrap: pretty;
 }
@@ -599,7 +623,7 @@ img {
 .process-card p {
   margin: 0;
   color: var(--muted);
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.64;
   text-wrap: pretty;
 }
@@ -715,7 +739,7 @@ img {
   padding: 0 22px 22px;
   color: var(--muted);
   font-size: 16px;
-  font-weight: 650;
+  font-weight: 700;
   line-height: 1.72;
 }
 

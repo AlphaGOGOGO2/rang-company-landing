@@ -1,10 +1,4 @@
 import type { Metadata } from "next";
-import "@fontsource/pretendard/400.css";
-import "@fontsource/pretendard/500.css";
-import "@fontsource/pretendard/600.css";
-import "@fontsource/pretendard/700.css";
-import "@fontsource/pretendard/800.css";
-import "@fontsource/pretendard/900.css";
 import "./globals.css";
 import { absoluteUrl, company, siteDescription, siteUrl } from "./site";
 
@@ -44,7 +38,7 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [
       {
-        url: "/og-rang.png",
+        url: "/og-rang.jpg",
         width: 1200,
         height: 630,
         alt: "주식회사 랑 식품 유통 파트너",
@@ -55,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "주식회사 랑 | 식품 도매 소매 위탁 납품 수출",
     description: siteDescription,
-    images: [absoluteUrl("/og-rang.png")],
+    images: [absoluteUrl("/og-rang.jpg")],
   },
   robots: {
     index: true,
