@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { preload } from "react-dom";
 import "./globals.css";
 import { absoluteUrl, company, siteDescription, siteUrl } from "./site";
 
@@ -82,6 +83,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Preload the body weight so the first paint swaps to Pretendard fast (reduces FOUT).
+  // crossOrigin is required because fonts are always fetched in anonymous CORS mode,
+  // even same-origin — without it the browser would download the file twice.
+  preload("/fonts/pretendard-400.woff2", {
+    as: "font",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  });
+
   return (
     <html lang="ko">
       <body>{children}</body>
