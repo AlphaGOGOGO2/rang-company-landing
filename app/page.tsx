@@ -1,6 +1,8 @@
 import {
   ArrowUpRight,
   Boxes,
+  Building2,
+  CheckCircle2,
   Globe2,
   Handshake,
   Mail,
@@ -16,6 +18,8 @@ import {
   absoluteUrl,
   company,
   faqs,
+  inquiryChecklist,
+  partnerTypes,
   processSteps,
   serviceAreas,
   siteDescription,
@@ -164,7 +168,7 @@ export default function Home() {
           <nav className="nav-links" aria-label="페이지 이동">
             <a href="#services">서비스</a>
             <a href="#process">운영</a>
-            <a href="#food">식품 유통</a>
+            <a href="#partners">상담 준비</a>
             <a href="#contact">문의</a>
           </nav>
           <a className="header-action" href={company.phoneHref}>
@@ -252,6 +256,40 @@ export default function Home() {
               </article>
             );
           })}
+        </div>
+      </section>
+
+      <section className="partners-section" id="partners" aria-labelledby="partners-title">
+        <div className="section-heading">
+          <p className="eyebrow dark">Trade fit</p>
+          <h2 id="partners-title">이런 거래에 맞습니다</h2>
+        </div>
+        <div className="partners-layout">
+          <div className="partner-grid">
+            {partnerTypes.map((partner) => (
+              <article className="partner-card" key={partner.title}>
+                <Building2 size={23} aria-hidden="true" />
+                <h3>{partner.title}</h3>
+                <p>{partner.body}</p>
+              </article>
+            ))}
+          </div>
+          <aside className="inquiry-panel" aria-labelledby="inquiry-title">
+            <p className="eyebrow">Before contact</p>
+            <h3 id="inquiry-title">상담 전 확인 정보</h3>
+            <ul>
+              {inquiryChecklist.map((item) => (
+                <li key={item}>
+                  <CheckCircle2 size={18} aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a href={company.phoneHref}>
+              <Phone size={18} aria-hidden="true" />
+              바로 상담하기
+            </a>
+          </aside>
         </div>
       </section>
 
