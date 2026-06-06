@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import HeroShowcase from "./HeroShowcase";
 import ScrollReveal from "./ScrollReveal";
+import ScrollControls from "./ScrollControls";
 import {
   absoluteUrl,
   company,
@@ -393,6 +394,7 @@ export default function Home() {
           Food distribution
         </div>
       </footer>
+      <ScrollControls />
     </main>
   );
 }
