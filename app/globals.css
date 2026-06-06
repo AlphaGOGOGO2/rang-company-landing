@@ -1,27 +1,3 @@
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/pretendard-400.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/pretendard-700.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("/fonts/pretendard-900.woff2") format("woff2");
-}
-
 :root {
   --ink: #211d1a;
   --muted: #6f6257;
@@ -50,7 +26,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui,
+  font-family: var(--font-pretendard), "Apple SD Gothic Neo", "Noto Sans KR", system-ui,
     sans-serif;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -561,6 +537,7 @@ img {
 .services-section,
 .partners-section,
 .process-section,
+.coverage-section,
 .food-section,
 .faq-section {
   padding: clamp(64px, 9vw, 120px) max(20px, calc((100vw - 1180px) / 2));
@@ -580,6 +557,11 @@ img {
     linear-gradient(180deg, rgba(223, 232, 197, 0.42), rgba(255, 250, 240, 0.92)),
     var(--paper);
   border-top: 1px solid var(--line);
+}
+
+.coverage-section {
+  background: var(--paper);
+  border-top: 1px solid rgba(33, 29, 26, 0.08);
 }
 
 .section-heading {
@@ -759,6 +741,39 @@ img {
 }
 
 .process-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.64;
+  text-wrap: pretty;
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.coverage-card {
+  min-height: 240px;
+  padding: 24px;
+  background: rgba(255, 253, 247, 0.76);
+}
+
+.coverage-card:nth-child(2),
+.coverage-card:nth-child(4) {
+  background: rgba(242, 196, 169, 0.34);
+}
+
+.coverage-card h3 {
+  margin: 0 0 72px;
+  font-size: clamp(22px, 2.3vw, 31px);
+  line-height: 1.1;
+}
+
+.coverage-card p {
   margin: 0;
   color: var(--muted);
   font-weight: 700;
@@ -1090,6 +1105,7 @@ address span:last-child {
   .service-grid,
   .partner-grid,
   .process-grid,
+  .coverage-grid,
   .food-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1163,6 +1179,7 @@ address span:last-child {
   .service-grid,
   .partner-grid,
   .process-grid,
+  .coverage-grid,
   .food-grid {
     grid-template-columns: 1fr;
   }

@@ -15,6 +15,15 @@ export const company = {
   addressRegion: "대구광역시",
   addressLocality: "달서구",
   streetAddress: "용산로 141, 그랜드M타워 1305호",
+  postalCode: "42628",
+  latitude: 35.850146,
+  longitude: 128.53011,
+  openingHours: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
+  priceRange: "$$",
 };
 
 export const siteDescription =
@@ -26,6 +35,25 @@ export const serviceAreas = [
   { label: "위탁", detail: "상품 특성에 맞춘 유연한 위탁 판매" },
   { label: "납품", detail: "사업장 일정에 맞춘 빠른 공급 대응" },
   { label: "수출", detail: "해외 거래를 염두에 둔 식품 소싱" },
+];
+
+export const productCoverage = [
+  {
+    title: "신선 식품과 농산물",
+    body: "과일, 채소, 선도 중심 식품처럼 입고 일정과 보관 조건이 중요한 품목을 거래 방식에 맞춰 검토합니다.",
+  },
+  {
+    title: "가공 식품과 포장 상품",
+    body: "온라인 판매, 소매 구색, 사업장 납품에 필요한 포장 단위와 반복 공급 조건을 함께 조율합니다.",
+  },
+  {
+    title: "사업장 정기 납품",
+    body: "입고 지역, 납품 주기, 물량 변동을 기준으로 식품 공급 흐름이 끊기지 않도록 운영 조건을 맞춥니다.",
+  },
+  {
+    title: "온라인·수출 채널",
+    body: "판매 채널, 포장 조건, 희망 국가와 물량을 확인한 뒤 위탁 판매와 수출 가능성을 검토합니다.",
+  },
 ];
 
 export const processSteps = [

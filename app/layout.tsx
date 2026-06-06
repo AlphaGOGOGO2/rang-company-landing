@@ -1,7 +1,30 @@
 import type { Metadata } from "next";
-import { preload } from "react-dom";
+import localFont from "next/font/local";
 import "./globals.css";
 import { absoluteUrl, company, siteDescription, siteUrl } from "./site";
+
+const pretendard = localFont({
+  src: [
+    {
+      path: "../public/fonts/pretendard-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/pretendard-700.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/pretendard-900.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-pretendard",
+  display: "swap",
+  fallback: ["Apple SD Gothic Neo", "Noto Sans KR", "system-ui", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -83,18 +106,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Preload the body weight so the first paint swaps to Pretendard fast (reduces FOUT).
-  // crossOrigin is required because fonts are always fetched in anonymous CORS mode,
-  // even same-origin — without it the browser would download the file twice.
-  preload("/fonts/pretendard-400.woff2", {
-    as: "font",
-    type: "font/woff2",
-    crossOrigin: "anonymous",
-  });
-
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body className={pretendard.variable}>{children}</body>
     </html>
   );
 }

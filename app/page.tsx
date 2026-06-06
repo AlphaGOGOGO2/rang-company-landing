@@ -24,6 +24,7 @@ import {
   inquiryChecklist,
   partnerTypes,
   processSteps,
+  productCoverage,
   serviceAreas,
   siteDescription,
   siteUrl,
@@ -84,18 +85,41 @@ export default function Home() {
       addressRegion: company.addressRegion,
       addressLocality: company.addressLocality,
       streetAddress: company.streetAddress,
+      postalCode: company.postalCode,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: company.latitude,
+      longitude: company.longitude,
+    },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${company.latitude},${company.longitude}`,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: company.openingHours.days,
+        opens: company.openingHours.opens,
+        closes: company.openingHours.closes,
+      },
+    ],
+    priceRange: company.priceRange,
     areaServed: [
       {
         "@type": "Country",
         name: "대한민국",
       },
       {
+        "@type": "AdministrativeArea",
+        name: "전국 식품 납품 및 유통 상담",
+      },
+      {
         "@type": "Place",
         name: "해외 수출 거래 지역",
       },
     ],
-    knowsAbout: serviceAreas.map((service) => `식품 ${service.label}`),
+    knowsAbout: [
+      ...serviceAreas.map((service) => `식품 ${service.label}`),
+      ...productCoverage.map((item) => item.title),
+    ],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -149,12 +173,31 @@ export default function Home() {
     })),
   };
 
+  const productCoverageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": absoluteUrl("/#coverage"),
+    name: "주식회사 랑 취급 품목과 공급 채널",
+    itemListElement: productCoverage.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.title,
+      description: item.body,
+      url: absoluteUrl("/#coverage"),
+    })),
+  };
+
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([organizationJsonLd, webSiteJsonLd, faqJsonLd]),
+          __html: JSON.stringify([
+            organizationJsonLd,
+            webSiteJsonLd,
+            faqJsonLd,
+            productCoverageJsonLd,
+          ]),
         }}
       />
       <section className="hero" aria-labelledby="hero-title">
@@ -318,6 +361,21 @@ export default function Home() {
               <span>{String(index + 1).padStart(2, "0")}</span>
               <h3>{step.title}</h3>
               <p>{step.body}</p>
+            </article>
+          ))}
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal className="coverage-section" id="coverage" aria-labelledby="coverage-title">
+        <div className="section-heading">
+          <p className="eyebrow dark">Coverage</p>
+          <h2 id="coverage-title">취급 품목과 공급 채널</h2>
+        </div>
+        <div className="coverage-grid">
+          {productCoverage.map((item) => (
+            <article className="coverage-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
             </article>
           ))}
         </div>
