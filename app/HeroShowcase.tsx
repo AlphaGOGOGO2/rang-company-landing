@@ -1,6 +1,3 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
 const showcaseItems = [
@@ -36,34 +33,19 @@ const showcaseItems = [
   },
 ];
 
-export default function HeroShowcase() {
-  const reduceMotion = useReducedMotion();
-  const loopItems = [...showcaseItems, ...showcaseItems];
+const loopItems = [...showcaseItems, ...showcaseItems];
 
+export default function HeroShowcase() {
   return (
     <div className="hero-showcase" aria-label="주식회사 랑 취급 상품 이미지 쇼케이스">
       <div className="showcase-orbit" aria-hidden="true" />
       <div className="showcase-viewport">
-        <motion.div
-          className="showcase-track"
-          animate={reduceMotion ? { x: 0 } : { x: ["0%", "-50%"] }}
-          transition={
-            reduceMotion
-              ? undefined
-              : {
-                  duration: 24,
-                  ease: "linear",
-                  repeat: Infinity,
-                }
-          }
-        >
+        <div className="showcase-track">
           {loopItems.map((item, index) => (
-            <motion.article
+            <article
               className="showcase-card"
               key={`${item.title}-${index}`}
-              initial={reduceMotion ? false : { opacity: 0, y: 18, scale: 0.96 }}
-              animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
-              transition={{ delay: Math.min(index, 4) * 0.08, duration: 0.45 }}
+              style={{ animationDelay: `${Math.min(index, 4) * 0.08}s` }}
             >
               <Image
                 src={item.src}
@@ -77,9 +59,9 @@ export default function HeroShowcase() {
                 <span>{item.label}</span>
                 <strong>{item.title}</strong>
               </div>
-            </motion.article>
+            </article>
           ))}
-        </motion.div>
+        </div>
       </div>
       <div className="showcase-caption">
         <span>Wholesale</span>

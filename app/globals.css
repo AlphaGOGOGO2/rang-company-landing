@@ -337,6 +337,27 @@ img {
   width: max-content;
   gap: clamp(16px, 2vw, 24px);
   will-change: transform;
+  animation: showcase-marquee 24s linear infinite;
+}
+
+@keyframes showcase-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes showcase-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .showcase-card {
@@ -348,6 +369,7 @@ img {
   border: 1px solid rgba(33, 29, 26, 0.12);
   border-radius: 20px;
   box-shadow: 0 24px 58px rgba(82, 51, 32, 0.17);
+  animation: showcase-card-in 0.45s ease both;
 }
 
 .showcase-card img {
@@ -809,6 +831,16 @@ address span:last-child {
     scroll-behavior: auto !important;
     transition-duration: 1ms !important;
     animation-duration: 1ms !important;
+  }
+
+  /* Stop the infinite marquee entirely; a 1ms-looped marquee would flash. */
+  .showcase-track {
+    animation: none !important;
+    transform: translateX(0) !important;
+  }
+
+  .showcase-card {
+    animation: none !important;
   }
 }
 
