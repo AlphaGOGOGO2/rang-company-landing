@@ -5,31 +5,31 @@ import Image from "next/image";
 
 const showcaseItems = [
   {
-    src: "/assets/rang-carousel-citrus.png",
+    src: "/assets/rang-carousel-citrus.webp",
     title: "Citrus & grocery",
     label: "소매 구색",
     alt: "감귤류 과일과 프리미엄 식품 패키지 이미지",
   },
   {
-    src: "/assets/rang-carousel-berries.png",
+    src: "/assets/rang-carousel-berries.webp",
     title: "Fresh cold chain",
     label: "신선 공급",
     alt: "베리류와 냉장 식품 공급 이미지",
   },
   {
-    src: "/assets/rang-carousel-drygoods.png",
+    src: "/assets/rang-carousel-drygoods.webp",
     title: "Dry goods",
     label: "위탁 상품",
     alt: "곡물과 건조 식품 패키지 이미지",
   },
   {
-    src: "/assets/rang-carousel-export.png",
+    src: "/assets/rang-carousel-export.webp",
     title: "Export ready",
     label: "수출 납품",
     alt: "수출용 과일 상자와 납품 박스 이미지",
   },
   {
-    src: "/assets/rang-hero-produce.png",
+    src: "/assets/rang-hero-produce.webp",
     title: "Produce mix",
     label: "도매 식품",
     alt: "도매와 납품용 신선 채소 이미지",

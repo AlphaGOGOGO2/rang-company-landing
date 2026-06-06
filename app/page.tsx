@@ -32,19 +32,19 @@ const foodImages = [
   {
     title: "Fresh produce",
     subtitle: "선도 중심",
-    src: "/assets/rang-fresh-produce.png",
+    src: "/assets/rang-fresh-produce.webp",
     alt: "신선한 채소와 과일을 촬영한 주식회사 랑 식품 유통 이미지",
   },
   {
     title: "Packaged goods",
     subtitle: "납품 대응",
-    src: "/assets/rang-packaged-goods.png",
+    src: "/assets/rang-packaged-goods.webp",
     alt: "위탁과 납품을 위한 포장 식품과 박스 이미지",
   },
   {
     title: "Global routes",
     subtitle: "수출 확장",
-    src: "/assets/rang-export-logistics.png",
+    src: "/assets/rang-export-logistics.webp",
     alt: "식품 수출 물류와 납품 박스를 촬영한 이미지",
   },
 ];
@@ -59,9 +59,9 @@ export default function Home() {
     url: siteUrl,
     logo: absoluteUrl("/assets/logo/ranglogo.webp"),
     image: [
-      absoluteUrl("/assets/rang-hero-produce.png"),
-      absoluteUrl("/assets/rang-fresh-produce.png"),
-      absoluteUrl("/assets/rang-packaged-goods.png"),
+      absoluteUrl("/assets/rang-hero-produce.webp"),
+      absoluteUrl("/assets/rang-fresh-produce.webp"),
+      absoluteUrl("/assets/rang-packaged-goods.webp"),
     ],
     description: siteDescription,
     telephone: company.phoneInternational,
