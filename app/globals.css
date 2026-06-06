@@ -279,6 +279,11 @@ img {
   margin-top: 20px;
 }
 
+.contact-link-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
 .primary-button,
 .secondary-button {
   display: inline-flex;
@@ -300,6 +305,24 @@ img {
 
 .secondary-button {
   background: rgba(255, 250, 240, 0.8);
+}
+
+.contact-toast {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 4;
+  min-width: max-content;
+  padding: 7px 10px;
+  color: var(--paper);
+  background: rgba(33, 29, 26, 0.92);
+  border-radius: 999px;
+  box-shadow: 0 12px 28px rgba(33, 29, 26, 0.18);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .hero-metrics {
@@ -1123,6 +1146,7 @@ address span:last-child {
   }
 
   .hero-actions,
+  .contact-link-wrap,
   .primary-button,
   .secondary-button {
     width: 100%;

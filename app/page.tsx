@@ -16,6 +16,7 @@ import Image from "next/image";
 import HeroShowcase from "./HeroShowcase";
 import ScrollReveal from "./ScrollReveal";
 import ScrollControls from "./ScrollControls";
+import ContactLink from "./ContactLink";
 import {
   absoluteUrl,
   company,
@@ -201,14 +202,24 @@ export default function Home() {
               <span>한 번에 연결하는 프리미엄 유통 파트너입니다.</span>
             </p>
             <div className="hero-actions" aria-label="주요 연락">
-              <a className="primary-button" href={company.phoneHref}>
+              <ContactLink
+                className="primary-button"
+                href={company.phoneHref}
+                copyValue={company.phone}
+                feedback="전화번호를 복사했습니다"
+              >
                 <Phone size={18} aria-hidden="true" />
                 {company.phone}
-              </a>
-              <a className="secondary-button" href={company.emailHref}>
+              </ContactLink>
+              <ContactLink
+                className="secondary-button"
+                href={company.emailHref}
+                copyValue={company.email}
+                feedback="이메일을 복사했습니다"
+              >
                 <Mail size={18} aria-hidden="true" />
                 이메일 문의
-              </a>
+              </ContactLink>
             </div>
             <div className="hero-metrics" aria-label="주요 사업 영역">
               <span>도매</span>
