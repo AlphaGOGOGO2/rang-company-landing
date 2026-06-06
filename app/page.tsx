@@ -25,6 +25,7 @@ import {
   siteDescription,
   siteUrl,
 } from "./site";
+import FaqAccordion from "./FaqAccordion";
 
 const serviceIcons = [Boxes, ShoppingBag, Handshake, Truck, Globe2];
 const services = serviceAreas.map((service, index) => ({
@@ -339,14 +340,7 @@ export default function Home() {
           <p className="eyebrow dark">FAQ</p>
           <h2 id="faq-title">자주 묻는 질문</h2>
         </div>
-        <div className="faq-list">
-          {faqs.map((faq) => (
-            <details key={faq.question}>
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
-            </details>
-          ))}
-        </div>
+        <FaqAccordion items={faqs} />
       </section>
 
       <section className="contact-band" id="contact" aria-labelledby="contact-title">
