@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import HeroShowcase from "./HeroShowcase";
+import ScrollReveal from "./ScrollReveal";
 import {
   absoluteUrl,
   company,
@@ -221,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="statement" aria-label="핵심 소개">
+      <ScrollReveal className="statement" aria-label="핵심 소개">
         <div className="statement-art">
           <span>납품</span>
           <span>위탁</span>
@@ -239,9 +240,9 @@ export default function Home() {
           <span>상품을 연결하고 안정적인 공급 흐름을</span>
           <span>만드는 데 집중합니다.</span>
         </p>
-      </section>
+      </ScrollReveal>
 
-      <section className="services-section" id="services" aria-labelledby="services-title">
+      <ScrollReveal className="services-section" id="services" aria-labelledby="services-title">
         <div className="section-heading">
           <p className="eyebrow dark">Business area</p>
           <h2 id="services-title">다섯 가지 유통 범위</h2>
@@ -258,9 +259,9 @@ export default function Home() {
             );
           })}
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section className="partners-section" id="partners" aria-labelledby="partners-title">
+      <ScrollReveal className="partners-section" id="partners" aria-labelledby="partners-title">
         <div className="section-heading">
           <p className="eyebrow dark">Trade fit</p>
           <h2 id="partners-title">이런 거래에 맞습니다</h2>
@@ -292,9 +293,9 @@ export default function Home() {
             </a>
           </aside>
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section className="process-section" id="process" aria-labelledby="process-title">
+      <ScrollReveal className="process-section" id="process" aria-labelledby="process-title">
         <div className="section-heading">
           <p className="eyebrow dark">How we work</p>
           <h2 id="process-title">공급 운영 방식</h2>
@@ -308,9 +309,9 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section className="food-section" id="food" aria-labelledby="food-title">
+      <ScrollReveal className="food-section" id="food" aria-labelledby="food-title">
         <div className="section-heading">
           <p className="eyebrow dark">Food first</p>
           <h2 id="food-title">식품이 중심인 운영 방식</h2>
@@ -333,17 +334,17 @@ export default function Home() {
             </article>
           ))}
         </div>
-      </section>
+      </ScrollReveal>
 
-      <section className="faq-section" id="faq" aria-labelledby="faq-title">
+      <ScrollReveal className="faq-section" id="faq" aria-labelledby="faq-title">
         <div className="section-heading">
           <p className="eyebrow dark">FAQ</p>
           <h2 id="faq-title">자주 묻는 질문</h2>
         </div>
         <FaqAccordion items={faqs} />
-      </section>
+      </ScrollReveal>
 
-      <section className="contact-band" id="contact" aria-labelledby="contact-title">
+      <ScrollReveal className="contact-band" id="contact" aria-labelledby="contact-title">
         <div>
           <p className="eyebrow">Contact</p>
           <h2 id="contact-title">
@@ -363,7 +364,7 @@ export default function Home() {
             <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
-      </section>
+      </ScrollReveal>
 
       <footer className="site-footer">
         <div className="footer-brand">
