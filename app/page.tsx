@@ -209,6 +209,8 @@ export default function Home() {
               alt="주식회사 랑"
               width={240}
               height={101}
+              sizes="(max-width: 640px) 94px, 108px"
+              quality={82}
               priority
             />
           </a>
@@ -235,8 +237,10 @@ export default function Home() {
                 className="hero-logo-image"
                 src="/assets/logo/ranglogo.webp"
                 alt=""
-                width={800}
-                height={337}
+                width={640}
+                height={270}
+                sizes="(max-width: 640px) 300px, 560px"
+                quality={82}
                 priority
               />
             </h1>
@@ -395,6 +399,7 @@ export default function Home() {
                 width={720}
                 height={760}
                 sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 33vw"
+                quality={72}
                 loading="lazy"
               />
               <div>
@@ -444,6 +449,8 @@ export default function Home() {
             alt="주식회사 랑"
             width={240}
             height={101}
+            sizes="170px"
+            quality={82}
           />
           <div>
             <p>도매 / 소매 / 위탁 / 납품 / 수출</p>

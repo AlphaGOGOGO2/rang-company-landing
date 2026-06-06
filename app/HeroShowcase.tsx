@@ -50,10 +50,13 @@ export default function HeroShowcase() {
               <Image
                 src={item.src}
                 alt={item.alt}
-                width={680}
-                height={680}
-                sizes="(max-width: 640px) 74vw, (max-width: 980px) 42vw, 300px"
-                {...(index === 0 ? { priority: true } : { loading: "lazy" as const })}
+                width={640}
+                height={640}
+                sizes="(max-width: 640px) 52vw, (max-width: 980px) 32vw, 260px"
+                quality={68}
+                {...(index < 4
+                  ? { priority: true, fetchPriority: "high" as const }
+                  : { loading: "lazy" as const })}
               />
               <div className="showcase-card-copy">
                 <span>{item.label}</span>
