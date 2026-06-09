@@ -389,6 +389,7 @@ export default function Home() {
             ))}
           </span>
           <a href={company.emailHref}>{company.email}</a>
+          <span className="footer-biznum">사업자등록번호 {company.businessNumber}</span>
           <span>
             <MapPin size={16} aria-hidden="true" />
             {company.address}
@@ -396,7 +397,7 @@ export default function Home() {
         </address>
         <div className="footer-seal" aria-label="주요 취급 분야">
           <PackageCheck size={19} aria-hidden="true" />
-          Food distribution
+          Distribution &amp; trade
         </div>
       </footer>
       <ScrollControls />

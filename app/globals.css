@@ -1044,6 +1044,12 @@ address span:last-child {
   font-size: 13px;
 }
 
+.footer-biznum {
+  flex-basis: 100%;
+  color: rgba(255, 250, 240, 0.62);
+  font-size: 13px;
+}
+
 .footer-seal {
   display: inline-flex;
   align-items: center;

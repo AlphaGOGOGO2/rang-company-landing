@@ -15,6 +15,7 @@ export const company = {
   phoneInternational: "+82-10-5738-8728",
   email: "rangcompany@kakao.com",
   emailHref: "mailto:rangcompany@kakao.com",
+  businessNumber: "666-87-03958",
   address: "대구광역시 달서구 용산로 141, 그랜드M타워 1305호",
   addressRegion: "대구광역시",
   addressLocality: "달서구",
