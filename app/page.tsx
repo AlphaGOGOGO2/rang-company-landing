@@ -195,6 +195,8 @@ export default function Home() {
           <nav className="nav-links" aria-label="페이지 이동">
             <a href="#services">사업분야</a>
             <a href="#partners">컨설팅</a>
+            <a href="#coverage">취급품목</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact">문의</a>
           </nav>
           <a className="header-action" href={company.phoneHref}>
@@ -205,7 +207,7 @@ export default function Home() {
 
         <div className="hero-grid" id="top">
           <div className="hero-copy">
-            <p className="eyebrow">Food trading partner</p>
+            <p className="eyebrow">Distribution &amp; trade partner</p>
             <h1 id="hero-title" className="hero-logo-title">
               <span className="sr-only">
                 주식회사 랑 식품 도매 소매 위탁 납품 수출 파트너

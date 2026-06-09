@@ -64,11 +64,11 @@ export const serviceAreas = [
 
 export const productCoverage = [
   {
-    title: "신선 식품과 농산물",
+    title: "신선 식품·농산물",
     body: "과일, 채소, 선도 중심 식품처럼 입고 일정과 보관 조건이 중요한 품목을 거래 방식에 맞춰 검토합니다.",
   },
   {
-    title: "가공 식품과 포장 상품",
+    title: "가공·포장 상품",
     body: "온라인 판매, 소매 구색, 사업장 납품에 필요한 포장 단위와 반복 공급 조건을 함께 조율합니다.",
   },
   {
