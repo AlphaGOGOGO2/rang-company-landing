@@ -247,7 +247,7 @@ export default function Home() {
         <div>
           <p className="eyebrow dark">Rang company</p>
           <h2>
-            <span>식품 유통의 필요한 지점을</span>
+            <span>유통의 필요한 지점을</span>
             <span>한 번에 맞춥니다.</span>
           </h2>
         </div>
@@ -380,8 +380,14 @@ export default function Home() {
           </div>
         </div>
         <address>
-          <span>대표 {company.representative}</span>
-          <a href={company.phoneHref}>{company.phone}</a>
+          <span className="footer-reps">
+            <span className="footer-reps-label">대표</span>
+            {company.representatives.map((rep) => (
+              <span className="footer-rep" key={rep.phoneHref}>
+                {rep.name} <a href={rep.phoneHref}>{rep.phone}</a>
+              </span>
+            ))}
+          </span>
           <a href={company.emailHref}>{company.email}</a>
           <span>
             <MapPin size={16} aria-hidden="true" />

@@ -209,6 +209,10 @@ img {
   color: var(--coral);
 }
 
+.statement .eyebrow.dark {
+  color: #fff;
+}
+
 .hero-copy {
   text-align: center;
 }
@@ -1026,6 +1030,18 @@ address span:last-child {
   align-items: center;
   gap: 6px;
   flex-basis: 100%;
+}
+
+.footer-reps {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-basis: 100%;
+}
+
+.footer-reps-label {
+  color: rgba(255, 250, 240, 0.5);
+  font-size: 13px;
 }
 
 .footer-seal {
