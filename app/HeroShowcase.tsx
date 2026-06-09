@@ -2,34 +2,34 @@ import Image from "next/image";
 
 const showcaseItems = [
   {
-    src: "/assets/rang-carousel-citrus.webp",
-    title: "Citrus & grocery",
-    label: "소매 구색",
-    alt: "감귤류 과일과 프리미엄 식품 패키지 이미지",
+    src: "/assets/rang-service-wholesale.webp",
+    label: "도매",
+    englishLabel: "Wholesale",
+    alt: "도매 식품 유통 이미지",
   },
   {
-    src: "/assets/rang-carousel-berries.webp",
-    title: "Fresh cold chain",
-    label: "신선 공급",
-    alt: "베리류와 냉장 식품 공급 이미지",
+    src: "/assets/rang-service-retail.webp",
+    label: "소매",
+    englishLabel: "Retail",
+    alt: "소매 식품 유통 이미지",
   },
   {
-    src: "/assets/rang-carousel-drygoods.webp",
-    title: "Dry goods",
-    label: "위탁 상품",
-    alt: "곡물과 건조 식품 패키지 이미지",
+    src: "/assets/rang-service-consignment.webp",
+    label: "위탁",
+    englishLabel: "Consignment",
+    alt: "위탁 식품 유통 이미지",
   },
   {
-    src: "/assets/rang-carousel-export.webp",
-    title: "Export ready",
-    label: "수출 납품",
-    alt: "수출용 과일 상자와 납품 박스 이미지",
+    src: "/assets/rang-service-delivery.webp",
+    label: "납품",
+    englishLabel: "Delivery",
+    alt: "납품 식품 유통 이미지",
   },
   {
-    src: "/assets/rang-hero-produce.webp",
-    title: "Produce mix",
-    label: "도매 식품",
-    alt: "도매와 납품용 신선 채소 이미지",
+    src: "/assets/rang-service-export.webp",
+    label: "수출",
+    englishLabel: "Export",
+    alt: "수출 식품 유통 이미지",
   },
 ];
 
@@ -37,14 +37,14 @@ const loopItems = [...showcaseItems, ...showcaseItems];
 
 export default function HeroShowcase() {
   return (
-    <div className="hero-showcase" aria-label="주식회사 랑 취급 상품 이미지 쇼케이스">
+    <div className="hero-showcase" aria-label="주식회사 랑 유통 범위 이미지 쇼케이스">
       <div className="showcase-orbit" aria-hidden="true" />
       <div className="showcase-viewport">
         <div className="showcase-track">
           {loopItems.map((item, index) => (
             <article
               className="showcase-card"
-              key={`${item.title}-${index}`}
+              key={`${item.label}-${index}`}
               style={{ animationDelay: `${Math.min(index, 4) * 0.08}s` }}
             >
               <Image
@@ -53,24 +53,18 @@ export default function HeroShowcase() {
                 width={640}
                 height={640}
                 sizes="(max-width: 640px) 52vw, (max-width: 980px) 32vw, 260px"
-                quality={68}
+                quality={75}
                 {...(index < 4
                   ? { priority: true, fetchPriority: "high" as const }
                   : { loading: "lazy" as const })}
               />
               <div className="showcase-card-copy">
-                <span>{item.label}</span>
-                <strong>{item.title}</strong>
+                <strong>{item.label}</strong>
+                <span>{item.englishLabel}</span>
               </div>
             </article>
           ))}
         </div>
-      </div>
-      <div className="showcase-caption">
-        <span>Wholesale</span>
-        <span>Consignment</span>
-        <span>Delivery</span>
-        <span>Export</span>
       </div>
     </div>
   );
