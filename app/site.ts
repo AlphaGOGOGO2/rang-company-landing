@@ -37,7 +37,7 @@ export const siteDescription =
 export const serviceAreas = [
   {
     label: "도매",
-    detail: "대량 공급과 반복 발주에 맞춘 식품 유통",
+    detail: "대량 공급과 반복 발주에 맞춘 유통",
     imageSrc: "/assets/rang-service-wholesale.webp",
   },
   {
@@ -57,7 +57,7 @@ export const serviceAreas = [
   },
   {
     label: "수출",
-    detail: "해외 거래를 염두에 둔 식품 소싱",
+    detail: "해외 거래를 염두에 둔 소싱",
     imageSrc: "/assets/rang-service-export.webp",
   },
 ];
@@ -103,7 +103,7 @@ export const processSteps = [
 export const partnerTypes = [
   {
     title: "유통사와 도매 거래처",
-    body: "반복 발주, 시즌 물량, 채널별 구색에 맞춰 공급 가능한 식품을 검토합니다.",
+    body: "반복 발주, 시즌 물량, 채널별 구색에 맞춰 공급 가능한 상품을 검토합니다.",
   },
   {
     title: "온라인 판매 채널",
@@ -129,9 +129,9 @@ export const inquiryChecklist = [
 
 export const faqs = [
   {
-    question: "주식회사 랑은 어떤 식품 거래를 주로 하나요?",
+    question: "주식회사 랑은 어떤 거래를 주로 하나요?",
     answer:
-      "식품을 중심으로 도매, 소매, 위탁 판매, 사업장 납품, 수출 거래를 연결합니다. 거래처의 판매 방식과 물량에 맞춰 상품을 검토합니다.",
+      "도매, 소매, 위탁 판매, 사업장 납품, 수출 거래를 연결합니다. 거래처의 판매 방식과 물량에 맞춰 상품을 검토합니다.",
   },
   {
     question: "소량 소매 거래와 대량 도매 거래를 모두 상담할 수 있나요?",
