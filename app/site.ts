@@ -1,6 +1,6 @@
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://rang-eight.vercel.app";
+  "https://rangcompany.co.kr";
 
 export const company = {
   name: "주식회사 랑",

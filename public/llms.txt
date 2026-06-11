@@ -12,13 +12,13 @@
 - 상담 전화: 010.5738.8728
 - 이메일: rangcompany@kakao.com
 - 주소: 대구광역시 달서구 용산로 141, 그랜드M타워 1305호
-- 공식 사이트: https://rang-eight.vercel.app
+- 공식 사이트: https://rangcompany.co.kr
 
 ## 주요 페이지
 
-- 홈페이지: https://rang-eight.vercel.app
-- 사이트맵: https://rang-eight.vercel.app/sitemap.xml
-- robots.txt: https://rang-eight.vercel.app/robots.txt
+- 홈페이지: https://rangcompany.co.kr
+- 사이트맵: https://rangcompany.co.kr/sitemap.xml
+- robots.txt: https://rangcompany.co.kr/robots.txt
 
 ## 상담 시 유용한 정보
 
