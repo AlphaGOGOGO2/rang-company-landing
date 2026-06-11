@@ -178,7 +178,7 @@ export default function Home() {
           ]),
         }}
       />
-      <section className="hero" aria-labelledby="hero-title">
+      <section className="hero" id="top" aria-labelledby="hero-title">
         <header className="site-header" aria-label="주요 메뉴">
           <a className="brand-mark" href="#top" aria-label="주식회사 랑 홈">
             <Image
@@ -205,7 +205,7 @@ export default function Home() {
           </a>
         </header>
 
-        <div className="hero-grid" id="top">
+        <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Distribution &amp; trade partner</p>
             <h1 id="hero-title" className="hero-logo-title">
