@@ -650,6 +650,7 @@ img {
 
 .service-card p {
   margin: 0;
+  min-height: calc(1.56em * 2);
   color: rgba(255, 253, 247, 0.88);
   font-weight: 700;
   line-height: 1.56;

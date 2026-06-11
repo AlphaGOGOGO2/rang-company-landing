@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description: metadataDescription,
     images: [
       {
-        url: "/og-rang.jpg",
+        url: "/og-rang-v2.png",
         width: 1200,
         height: 630,
         alt: "주식회사 랑 유통 파트너",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: metadataTitle,
     description: metadataDescription,
-    images: [absoluteUrl("/og-rang.jpg")],
+    images: [absoluteUrl("/og-rang-v2.png")],
   },
   robots: {
     index: true,

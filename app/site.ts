@@ -9,8 +9,8 @@ export const company = {
   phone: "010.5738.8728",
   phoneHref: "tel:01057388728",
   representatives: [
-    { name: "김준오", phone: "010.7766.3592", phoneHref: "tel:01077663592" },
-    { name: "모근호", phone: "010.5738.8728", phoneHref: "tel:01057388728" },
+    { name: "김준오", phone: "010. 7766. 3592", phoneHref: "tel:01077663592" },
+    { name: "모근호", phone: "010. 5738. 8728", phoneHref: "tel:01057388728" },
   ],
   phoneInternational: "+82-10-5738-8728",
   email: "rangcompany@kakao.com",

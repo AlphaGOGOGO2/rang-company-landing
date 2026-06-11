@@ -289,7 +289,7 @@ export default function Home() {
 
       <ScrollReveal className="partners-section" id="partners" aria-labelledby="partners-title">
         <div className="section-heading">
-          <p className="eyebrow dark">Trade fit</p>
+          <p className="eyebrow dark">Consulting</p>
           <h2 id="partners-title">이런 거래에 맞습니다</h2>
         </div>
         <div className="partners-layout">
