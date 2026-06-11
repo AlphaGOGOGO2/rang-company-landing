@@ -42,6 +42,11 @@ export const metadata: Metadata = {
   creator: company.name,
   publisher: company.name,
   category: "distribution",
+  verification: {
+    other: {
+      "naver-site-verification": "83ff5008c39262ac34663835105c698b9c01fec1",
+    },
+  },
   keywords: [
     "주식회사 랑",
     "랑컴퍼니",
