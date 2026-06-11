@@ -3,9 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { absoluteUrl, company, siteUrl } from "./site";
 
-const metadataTitle = "주식회사 랑 | 도매 소매 위탁 납품 수출";
-const metadataDescription =
-  "주식회사 랑은 도매, 소매, 위탁, 납품, 수출까지 연결하며 전국 거래처의 판매 방식과 물량, 일정, 채널에 맞춰 안정적인 공급 흐름을 설계합니다.";
+const metadataTitle = "주식회사 랑";
+const metadataDescription = "도매 | 소매 | 위탁 | 납품 | 수출";
 
 const pretendard = localFont({
   src: [
