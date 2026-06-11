@@ -893,7 +893,6 @@ img {
 .faq-list {
   display: grid;
   gap: 10px;
-  max-width: 920px;
 }
 
 .faq-item {
